@@ -36,28 +36,28 @@ export default function Status() {
                         <h1 className="text-white font-light">Mengambil Data...</h1>
                     </div>
                     :
-                    <div className={`w-full relative h-screen ${data?.keterangan == "Lulus" ? "bg-green-600" : "bg-red-600"} flex flex-col justify-center items-center px-2`}>
+                    <div className={`w-full relative h-screen ${data?.keterangan == "LULUS" ? "bg-green-600" : "bg-red-600"} flex flex-col justify-center items-center px-2`}>
                         {
-                            data?.keterangan == "Lulus" ? <Lottie animationData={Congrats} loop={true} className="w-[150px]" /> : <Lottie animationData={Failed} loop={true} className="w-[150px]" />
+                            data?.keterangan == "LULUS" ? <Lottie animationData={Congrats} loop={true} className="w-[150px]" /> : <Lottie animationData={Failed} loop={true} className="w-[150px]" />
                         }
                         <h1 className="text-4xl text-white text-center">
                             {
-                                data?.keterangan == "Lulus" ? "Selamat," : "Mohon Maaf,"
+                                data?.keterangan == "LULUS" ? "Selamat," : "Mohon Maaf,"
                             }
                         </h1>
                         <p className="text-4xl text-white font-semibold mt-1 text-center">{data?.nama}</p>
                         <p className="mt-2 text-lg text-white">
-                            {data?.keterangan == "Lulus" ? "Anda dinyatakan lulus" : "Anda dinyatakan tidak lulus"}
+                            {data?.keterangan == "LULUS" ? "Anda dinyatakan lulus" : "Anda dinyatakan tidak lulus"}
                         </p>
 
                         <Link
                             href={`/result/${ujianId}`}
-                            className={`bg-white ${data?.keterangan == "Lulus" ? "text-green-600" : "text-red-600"} rounded-lg text-lg shadow-md px-4 py-2 absolute bottom-10 z-50`}
+                            className={`bg-white ${data?.keterangan == "LULUS" ? "text-green-600" : "text-red-600"} rounded-lg text-lg shadow-md px-4 py-2 absolute bottom-10 z-50`}
                         >Lihat Raport</Link>
 
                         <div>
                             {
-                                data?.keterangan == "Lulus" && <Lottie animationData={Effect} loop={true} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-screen z-10" />
+                                data?.keterangan == "LULUS" && <Lottie animationData={Effect} loop={true} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-screen z-10" />
                             }
                         </div>
                     </div>

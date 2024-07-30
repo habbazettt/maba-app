@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { ThreeCircles } from "react-loader-spinner"
 import { FaHome } from "react-icons/fa"
 import Image from "next/image"
-
+import Link from "next/link"
 
 export default function Result() {
     const [data, setData] = useState([])
@@ -51,49 +51,24 @@ export default function Result() {
                             <div className="w-full h-[1px] bg-black -mt-1.5" />
 
                             <h1 className="text-center mt-4 font-extrabold">KELULUSAN CALON MAHASANTRI</h1>
-                            <div className="mt-2 w-[90%] mx-auto">
-                                <h1 className="text-sm">No Pendaftaran : {data?.ujianId}</h1>
-                                <h1 className="text-sm">Nama : {data?.nama}</h1>
-                                <h1 className="mt-0.5 text-[15px]">Nilai Raport : </h1>
-                            </div>
-
-                            <div className="w-[80%] mx-auto text-sm">
-                                <div className="flex justify-between">
-                                    <h1>Adab:</h1>
-                                    <h1>{data?.adab}</h1>
-                                </div>
-                                <div className="flex justify-between">
-                                    <h1>Kelancaran :</h1>
-                                    <h1>{data?.kelancaran}</h1>
-                                </div>
-                                <div className="flex justify-between">
-                                    <h1>Tajwid :</h1>
-                                    <h1>{data?.tajwid}</h1>
-                                </div>
-                                <div className="flex justify-between">
-                                    <h1>Fashohah :</h1>
-                                    <h1>{data?.fashohah}</h1>
-                                </div>
-                                <div className="flex justify-between">
-                                    <h1>Total Nilai :</h1>
-                                    <h1>{data?.nilai}</h1>
-                                </div>
-                                <div className="flex justify-between font-bold mt-1">
-                                    <h1>Keterangan:</h1>
-                                    <h1>{data?.keterangan}</h1>
-                                </div>
+                            <div className="mt-1 w-[90%] mx-auto flex flex-col">
+                                <h1 className="text-[15px]">No Pendaftaran : {data?.ujianId}</h1>
+                                <h1 className="text-[15px]">Nama : {data?.nama}</h1>
+                                <h1 className="mt-0.5 text-[15px]">Keterangan : {data?.keterangan}</h1>
+                                <h1 className="mt-0.5 text-[15px]">Mentor MPLM : {data?.mentor}</h1>
+                                <h1 className="mt-0.5 text-[15px]">Klik <Link className="text-blue-500 hover:text-blue-700 transition-all flex-wrap" target="_blank" href={data?.link}>disini</Link> untuk masuk ke group mentoring</h1>
                             </div>
 
                             <div className="w-full px-3 mx-auto text-center mt-2 font-semibold">
                                 {
-                                    data?.keterangan === 'Lulus' ?
+                                    data?.keterangan === 'LULUS' ?
                                         <p className="text-[16px]">Selamat, Anda diterima sebagai mahasantri baru Mahad Tahfidz UIN Sunan Gunung Djati</p>
                                         :
                                         <p className="text-[16px]">Maaf, Anda belum lulus seleksi masuk kali ini.</p>
                                 }
                             </div>
 
-                            <h1 className="text-right mt-2 mr-5 text-sm">Bandung, 28 Juli 2024</h1>
+                            <h1 className="text-right mt-2 mr-5 text-sm">Bandung, 1 Agustus 2024</h1>
 
                             <div className="text-center mx-auto mt-2 pb-5">
                                 <p className="text-[16px]">Mengetahui,</p>
@@ -103,7 +78,7 @@ export default function Result() {
                                 <p className="text-xs">NIP. 196104281993031002</p>
                             </div>
 
-                            <Image src="/logoMTA.svg" width={280} alt="" height={280} className="absolute opacity-[0.17] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10" />
+                            <Image src="/logoMTA.svg" width={280} alt="" height={280} className="absolute opacity-[0.15] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10" />
                             <Image src="/Stempel.png" width={400} alt="" height={400} className="absolute -bottom-14 -left-7 -z-10" />
                         </div>
 

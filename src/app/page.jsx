@@ -1,13 +1,13 @@
 "use client"
-import { useEffect, useState } from "react";
-import { CiSearch } from "react-icons/ci";
-import { ThreeCircles } from "react-loader-spinner";
-import VerifModal from "@/components/VerifModal";
-import { useRouter } from "next/navigation";
-import UnknownModal from "@/components/UnknownModal";
-import Lottie from "lottie-react";
+import { useEffect, useState } from "react"
+import { CiSearch } from "react-icons/ci"
+import { ThreeCircles } from "react-loader-spinner"
+import VerifModal from "@/components/VerifModal"
+import { useRouter } from "next/navigation"
+import UnknownModal from "@/components/UnknownModal"
+import Lottie from "lottie-react"
 import Unknown from '@/components/Unknown.json'
-import Image from "next/image";
+import Image from "next/image"
 
 export default function Home() {
   const [data, setData] = useState([])
@@ -64,7 +64,7 @@ export default function Home() {
                 }}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Masukkan No Kontak"
-                className="w-full h-10 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                className="container h-10 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
               />
               <button onClick={() => {
                 if (data.find((item) => item.noKontak == search)) {
