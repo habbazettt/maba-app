@@ -37,7 +37,7 @@ export default function Result() {
                     </div>
                     :
                     <>
-                        <div className="w-[390px] h-full mx-auto sm:mt-10 mt-0 border border-black relative">
+                        <div className="w-[390px] h-full mx-auto sm:mt-10 mt-0 border border-black relative bg-whites">
                             <div className="text-center p-2.5 relative mx-auto bg-primary text-white">
                                 <div className="flex justify-center items-center -mt-5">
                                     <Image src="/logoMahadPutih.svg" alt="" width={46} height={46} className=" ml-6" />
@@ -56,7 +56,7 @@ export default function Result() {
                                 <h1 className="text-[15px]">Nama : {data?.nama}</h1>
                                 <h1 className="mt-0.5 text-[15px]">Keterangan : {data?.keterangan}</h1>
                                 <h1 className="mt-0.5 text-[15px]">Mentor MPLM : {data?.mentor}</h1>
-                                <h1 className="mt-0.5 text-[15px]">Klik <Link className="text-blue-500 hover:text-blue-700 transition-all flex-wrap" target="_blank" href={data?.link}>disini</Link> untuk masuk ke group mentoring</h1>
+                                <h1 className="mt-0.5 text-[15px]">Klik <Link className="text-blue-500 hover:text-blue-700 transition-all duration-300 font-semibold" target="_blank" href={data?.link}>disini</Link> untuk masuk ke group mentoring</h1>
                             </div>
 
                             <div className="w-full px-3 mx-auto text-center mt-2 font-semibold">
