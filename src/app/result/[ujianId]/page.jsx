@@ -56,7 +56,7 @@ export default function Result() {
                                 <h1 className="text-[15px]">Nama : {data?.nama}</h1>
                                 <h1 className="mt-0.5 text-[15px]">Keterangan : {data?.keterangan}</h1>
                                 <h1 className="mt-0.5 text-[15px]">Mentor MPLM : {data?.mentor}</h1>
-                                <h1 className="mt-0.5 text-[15px]">Klik <Link className="text-blue-500 hover:text-blue-700 transition-all duration-300 font-semibold" target="_blank" href={data?.link}>disini</Link> untuk masuk ke group mentoring</h1>
+                                <h1 className="mt-0.5 text-[15px]">Link Group : <Link className="text-blue-500 hover:text-blue-700 transition-all duration-300 font-semibold" target="_blank" href={data?.link}>klik disini</Link></h1>
                             </div>
 
                             <div className="w-full px-3 mx-auto text-center mt-2 font-semibold">
@@ -84,7 +84,6 @@ export default function Result() {
 
                         <div className="flex justify-center px-4 py-5 gap-4">
                             <button onClick={() => router.push("/")} className="mt-3 bg-primary rounded-md text-white px-3 py-2 font-poppins flex justify-center items-center gap-2"><FaHome className="w-5" />Beranda</button>
-                            {/* <button className="mt-3 bg-red-500 rounded-md text-white px-3 py-1 font-poppins flex gap-1"><FileText className="w-4" />Cetak PDF</button> */}
                         </div>
                     </>
 
